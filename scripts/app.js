@@ -107,7 +107,6 @@ function pauseAndPlay()
     else
     {
         video.pause();
-        clearInterval(progressTime);
     }
 }
 

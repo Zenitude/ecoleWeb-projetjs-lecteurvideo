@@ -13,7 +13,7 @@ container.appendChild(containerVideo);
 
 // Création de la video
 const video = document.createElement('video');
-video.setAttribute('src', '../ressources/video.mp4');
+video.setAttribute('src', 'ressources/video.mp4');
 video.addEventListener('timeupdate', progressionTimer);
 containerVideo.appendChild(video);
 
@@ -32,10 +32,7 @@ containerVideo.appendChild(controles);
     progressBar.setAttribute('max', video.duration);
     progressBar.value = 0 ;
     progressBar.addEventListener('click', changeTime)
-    controles.appendChild(progressBar);
-
-    let progressTime;
-    
+    controles.appendChild(progressBar);   
 
     /* Container des boutons de controles */
 
@@ -106,7 +103,6 @@ function pauseAndPlay()
     if(pausePlay.classList.contains('pause'))
     {
         video.play();
-        progressTime = setInterval(progression, 1000)
     }
     else
     {
